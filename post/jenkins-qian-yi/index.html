@@ -1,0 +1,207 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jenkins迁移 | Lura</title>
+<link rel="shortcut icon" href="https://demonran.github.io/favicon.ico?v=1669959793518">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://demonran.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Jenkins迁移 | Lura - Atom Feed" href="https://demonran.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+部署新的jenkins服务 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
+
+
+
+/usr/share/keyrings/jenkin..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://demonran.github.io">
+  <img class="avatar" src="https://demonran.github.io/images/avatar.png?v=1669959793518" alt="">
+  </a>
+  <h1 class="site-title">
+    Lura
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Jenkins迁移
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-11-29
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <ol>
+<li>部署新的jenkins服务<pre><code class="language-shell"> curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
+</code></pre>
+</li>
+</ol>
+<p>/usr/share/keyrings/jenkins-keyring.asc &gt; /dev/null<br>
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] <br>
+https://pkg.jenkins.io/debian-stable binary/ | sudo tee <br>
+/etc/apt/sources.list.d/jenkins.list &gt; /dev/null<br>
+sudo apt-get update<br>
+sudo apt-get install jenkins</p>
+<pre><code>
+如果要安装特定版本
+```shell 
+apt install jenkins=1.239.0
+</code></pre>
+<ol start="2">
+<li>停止服务</li>
+</ol>
+<pre><code>systemctl stop jenkins
+</code></pre>
+<blockquote>
+<p>可以通过<code>systemctl cat jenkins.service</code>查看服务启动配置</p>
+</blockquote>
+<ol start="3">
+<li>迁移如下几个目录文件
+<ul>
+<li>plugins</li>
+<li>users</li>
+<li>jobs</li>
+<li>config.xml</li>
+<li>credentials.xml</li>
+</ul>
+</li>
+<li>启动服务</li>
+</ol>
+<p>老版本的jenkins会启动一个damon进程来管理jenkins</p>
+<p>新版本是使用systemd管理。</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://demonran.github.io/post/tong-yi-wei-fu-wu-ri-zhi-ge-shi/">
+              <h3 class="post-title">
+                统一微服务日志格式
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/luraframework" target="_blank">Lura</a>
+  <a class="rss" href="https://demonran.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
