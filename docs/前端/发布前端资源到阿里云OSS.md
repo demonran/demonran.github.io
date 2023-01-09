@@ -69,32 +69,97 @@ files.forEach(async function (file) {
 
 ```
 
+## 其他优化点
+#### 1. 区分构建环境
+实际运用中会有多个部署环境， 一般会对不同的环境设置不同的bukcet, 所以我们需要讲静态资源发布到不同的bucket中
+
+可以在构建上传的是提交一个环境变量， 根据变量来动态设置要用的bucket
+```js
+function getBucket(env) {
+  const bucket = {
+    sit: 'sitBucket',
+    uat: 'uatBucket',
+    prod: 'prodBucket',
+  }
+  return bucket[env]
+}
+```
+
+增加不同的配置文件
+.env.sit
+.env.uat
+.env.prod
+每个配置文件中设置不同的环境变量`VUE_APP_BUCKET_NAME = 'sitBucket'`
+package.json中增加scripts
+```js
+"scripts": {
+    "build:prod": "vue-cli-service build && node scripts/upload.js prod",
+    "build:sit": "vue-cli-service build --mode sit && node scripts/upload.js sit",
+    "build:uat": "vue-cli-service build --mode uat && node scripts/upload.js uat"
+    ....
+}
+```
 
 
+
+完整的上传代码
 ```js
 const fs = require('fs')
 const path = require('path')
+const OSS = require('ali-oss')
 
-
+const static_dir = '__static__'
+const build_dir = 'dist/'
+function getOssClient(bucket) {
+  return new OSS({
+    region: // yourRegion,
+    accessKeyId: //'yourAccessKeyId',
+    accessKeySecret: // 'yourAccessKeySecret',
+    bucket: bucket//'exampleBucket',
+  })
+}
+function uploadOss(files, env) {
+  const client = getOssClient(getBucket(env));
+  files.forEach(async function (file) {
+    ossfile = path.join(static_dir, file.substr(build_dir.length))
+    console.log('upload', file)
+    await client.put(ossfile, file)
+  })
+}
 const dir_list = (dir_path, arr) => {
-    const files = fs.readdirSync(dir_path)
-    files.forEach(filename => {
-        const file_dir = path.join(dir_path, filename)
-        const stats = fs.statSync(file_dir)
-        const isDir = stats.isDirectory()
-        const isFile = stats.isFile()
-        if (isFile) {
-            arr.push(file_dir)
-        } else if (isDir) {
-            dir_list(file_dir, arr)
-        }
-    })
-    return arr
+  const files = fs.readdirSync(dir_path)
+  files.forEach(filename => {
+    const file_dir = path.join(dir_path, filename)
+    const stats = fs.statSync(file_dir)
+    const isDir = stats.isDirectory()
+    const isFile = stats.isFile()
+    if (isFile) {
+      arr.push(file_dir)
+    } else if (isDir) {
+      dir_list(file_dir, arr)
+    }
+  })
+  return arr
 
 }
 
-const arr = []
-dir_list('.', arr)
-console.log(arr.length)
+function getBucket(env) {
+  const bucket = {
+    sit: 'sitBucket',
+    uat: 'uatBucket',
+    prod: 'prodBucket',
+  }
+  return bucket[env]
+}
+
+function main() {
+  const env = process.argv[2]
+  const file_list = []
+  dir_list(build_dir, file_list)
+  uploadOss(file_list, env)
+}
+
+main()
+
 
 ```
