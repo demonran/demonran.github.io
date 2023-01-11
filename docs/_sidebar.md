@@ -2,6 +2,7 @@
 
 - Kubenetes系列
   - [Kubenetes常用的客户端工具](kubenetes系列/kubenetes常用的客户端工具.md)
+  - [办公网和K8s网络打通](kubenetes系列/办公网和k8s网络打通.md)
   - [（一）Kubenetes简介](kubenetes系列/（一）kubenetes简介.md)
   - [（一）国内K8s安装Nginx Ingress](kubenetes系列/（一）国内k8s安装nginx-ingress.md)
   - [（三）Etcd故障修复](kubenetes系列/（三）etcd故障修复.md)
