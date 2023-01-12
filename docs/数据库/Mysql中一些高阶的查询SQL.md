@@ -45,16 +45,16 @@ from daily_tasks
 select todolist_id, user_id, count(1) as days_of_continuous_done from t1 where t1.dt = curdate() group by todolist_id, user_id, dt;
 ```
 完整的查询sql
-```bash
+```sql
 with t1 as (  select user_id, todolist_id,
        date_add(date, interval( row_number() over (partition by todolist_id, user_id order by date desc)) day) as dt
 from daily_tasks )
 select todolist_id, user_id, count(1) as days_of_continuous_done from t1 where t1.dt = curdate() group by todolist_id, user_id, dt;
-
 ```
 
 2. 插入数据
 将查出来的数据迁移到统计表，可以使用insert into ... select 
+
 ```sql
 # 创建统计表
 create table nes.user_todolist_statistics
