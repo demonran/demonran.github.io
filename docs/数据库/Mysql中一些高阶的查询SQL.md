@@ -33,21 +33,18 @@ create table daily_tasks
 - mysql可以使用row_number()来获取排序序号
 ##### 实现
 1. 查询数据
-分析完问题和思路后我们可以转换成mysql语法完成。
+分析完问题和思路后我们可以转换成mysql语法完成sql。
 ```sql
 # 查询排序序号
 row_number() over (partition by todolist_id, daily_tasks.user_id order by date desc)
-
 # 计算dt
 select user_id, todolist_id, 
        date_add(date, interval( row_number() over (partition by todolist_id, user_id order by date desc)) day) as dt 
 from daily_tasks 
-
-# 统计数据
-# 假设上面过滤后的数据表为t1
+# 统计数据， 假设上面过滤后的数据表为t1
 select todolist_id, user_id, count(1) as days_of_continuous_done from t1 where t1.dt = curdate() group by todolist_id, user_id, dt;
 ```
-完整sql
+完整的查询sql
 ```bash
 with t1 as (  select user_id, todolist_id,
        date_add(date, interval( row_number() over (partition by todolist_id, user_id order by date desc)) day) as dt
@@ -76,6 +73,6 @@ from daily_tasks )
 select  todolist_id, user_id, count(1) as days_of_continuous_done from t1 where t1.dt = curdate() group by todolist_id, user_id, dt;
 
 ```
-如果id不是自增，是雪花或者uuid的话，数据库可以使用uuid_short()生成。
+如果id不是自增，是雪花或者uuid的话，数据库可以使用uuid_short()生成随机id。
 
 >持续更新补充
