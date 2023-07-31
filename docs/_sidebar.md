@@ -2,6 +2,10 @@
 - DDD
   - [DDD概述](DDD/DDD概述.md)
 
+- Java
+  - [Jpa并发Save导致数据覆盖](Java/Jpa并发save导致数据覆盖.md)
+  - [Spring中的@EventListener和@TransactionalEventListener](Java/Spring中的@EventListener和@TransactionalEventListener.md)
+
 - [README](README.md)
 
 - Kubenetes系列
@@ -14,10 +18,12 @@
   - [（二）国内K8s安装Nginx Ingress](kubenetes系列/（二）国内k8s安装nginx-ingress.md)
 
 - Linux系列
+  - [Redis集群搭建](linux系列/Redis集群搭建.md)
   - [Centos离线安装软件](linux系列/centos离线安装软件.md)
   - [Linux磁盘动态扩容](linux系列/linux磁盘动态扩容.md)
 
 - 其他
+  - [Akka](其他/Akka.md)
   - [小程序开发](其他/小程序开发.md)
 
 - 前端
