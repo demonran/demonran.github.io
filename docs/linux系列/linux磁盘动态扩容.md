@@ -101,6 +101,10 @@ tmpfs                    7.8G     0  7.8G   0% /sys/fs/cgroup
 tmpfs                    1.6G     0  1.6G   0% /run/user/0
 /dev/vdc1                 30G  979M   27G   4% /minio/dev_data
 ```
+
+查看分区文件系统
+df -T
+
 2. 使文件系统生效
 ```
 xfs_growfs /dev/mapper/centos-root  #xfs扩容

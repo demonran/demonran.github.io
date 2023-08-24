@@ -3,6 +3,7 @@
   - [DDD概述](DDD/DDD概述.md)
 
 - Java
+  - [Jpa使用EntityManagerFactory导致连接内存泄漏](Java/Jpa使用EntityManagerFactory导致连接内存泄漏.md)
   - [Jpa并发Save导致数据覆盖](Java/Jpa并发save导致数据覆盖.md)
   - [Spring中的@EventListener和@TransactionalEventListener](Java/Spring中的@EventListener和@TransactionalEventListener.md)
 
@@ -18,8 +19,10 @@
   - [（二）国内K8s安装Nginx Ingress](kubenetes系列/（二）国内k8s安装nginx-ingress.md)
 
 - Linux系列
+  - [Nginx错误解决方案](linux系列/Nginx错误解决方案.md)
   - [Redis集群搭建](linux系列/Redis集群搭建.md)
   - [Centos离线安装软件](linux系列/centos离线安装软件.md)
+  - [Linux测速](linux系列/linux测速.md)
   - [Linux磁盘动态扩容](linux系列/linux磁盘动态扩容.md)
 
 - 其他
@@ -33,6 +36,7 @@
 
 - 微服务篇
   - [Nacos2.X服务重启引起集群降级问题](微服务篇/Nacos2.x服务重启引起集群降级问题.md)
+  - [SrpingCloudGtteway源码分析](微服务篇/SrpingCloudGtteway源码分析.md)
   - [统一微服务日志](微服务篇/统一微服务日志.md)
 
 - 持续集成与持续部署系列
@@ -40,6 +44,7 @@
   - [Jenkins迁移](持续集成与持续部署系列/Jenkins迁移.md)
 
 - 数据库
+  - [Mysql中一些内置查询](数据库/Mysql中一些内置查询.md)
   - [Mysql中一些高阶的查询SQL](数据库/Mysql中一些高阶的查询SQL.md)
   - [Mysql数据迁移](数据库/Mysql数据迁移.md)
 
