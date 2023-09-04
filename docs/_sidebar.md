@@ -27,7 +27,10 @@
 
 - 其他
   - [Akka](其他/Akka.md)
+  - [Mac中一些常用的快捷键](其他/Mac中一些常用的快捷键.md)
+  - [Flowable实战](其他/flowable实战.md)
   - [小程序开发](其他/小程序开发.md)
+  - [流程引擎](其他/流程引擎.md)
 
 - 前端
   - [发布前端资源到阿里云OSS](前端/发布前端资源到阿里云OSS.md)
@@ -44,6 +47,7 @@
   - [Jenkins迁移](持续集成与持续部署系列/Jenkins迁移.md)
 
 - 数据库
+  - [Msyql高可用实践](数据库/Msyql高可用实践.md)
   - [Mysql中一些内置查询](数据库/Mysql中一些内置查询.md)
   - [Mysql中一些高阶的查询SQL](数据库/Mysql中一些高阶的查询SQL.md)
   - [Mysql数据迁移](数据库/Mysql数据迁移.md)
