@@ -20,11 +20,14 @@
   - [（二）国内K8s安装Nginx Ingress](kubenetes系列/（二）国内k8s安装nginx-ingress.md)
 
 - Linux系列
+  - [Linux虚拟网络空间Veth Pair详解](linux系列/Linux虚拟网络空间veth-pair详解.md)
   - [Nginx错误解决方案](linux系列/Nginx错误解决方案.md)
   - [Redis集群搭建](linux系列/Redis集群搭建.md)
   - [Centos离线安装软件](linux系列/centos离线安装软件.md)
+  - [K8s网络模型](linux系列/k8s网络模型.md)
   - [Linux测速](linux系列/linux测速.md)
   - [Linux磁盘动态扩容](linux系列/linux磁盘动态扩容.md)
+  - [网络命名空间](linux系列/网络命名空间.md)
   - [记一次端口占用排除过程](linux系列/记一次端口占用排除过程.md)
 
 - 其他
