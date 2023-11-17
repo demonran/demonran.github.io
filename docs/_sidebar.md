@@ -53,6 +53,7 @@
 
 - 数据库
   - [Msyql高可用实践](数据库/Msyql高可用实践.md)
+  - [Mysql一行数据是如何存储](数据库/Mysql一行数据是如何存储.md)
   - [Mysql中一些内置查询](数据库/Mysql中一些内置查询.md)
   - [Mysql中一些高阶的查询SQL](数据库/Mysql中一些高阶的查询SQL.md)
   - [Mysql数据迁移](数据库/Mysql数据迁移.md)
