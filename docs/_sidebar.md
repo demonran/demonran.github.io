@@ -27,6 +27,7 @@
   - [K8s网络模型](linux系列/k8s网络模型.md)
   - [Linux测速](linux系列/linux测速.md)
   - [Linux磁盘动态扩容](linux系列/linux磁盘动态扩容.md)
+  - [日志清理](linux系列/日志清理.md)
   - [网络命名空间](linux系列/网络命名空间.md)
   - [记一次端口占用排除过程](linux系列/记一次端口占用排除过程.md)
 
@@ -52,11 +53,12 @@
   - [Jenkins迁移](持续集成与持续部署系列/Jenkins迁移.md)
 
 - 数据库
-  - [Msyql高可用实践](数据库/Msyql高可用实践.md)
   - [Mysql一行数据是如何存储](数据库/Mysql一行数据是如何存储.md)
   - [Mysql中一些内置查询](数据库/Mysql中一些内置查询.md)
   - [Mysql中一些高阶的查询SQL](数据库/Mysql中一些高阶的查询SQL.md)
+  - [Mysql事物隔离级别](数据库/Mysql事物隔离级别.md)
   - [Mysql数据迁移](数据库/Mysql数据迁移.md)
+  - [Mysql高可用实践](数据库/Mysql高可用实践.md)
 
 - 算法
   - [数据结构](算法/数据结构.md)
