@@ -1,0 +1,158 @@
+{
+  "main": {
+    "id": "a4d9d612a434f74b",
+    "type": "split",
+    "children": [
+      {
+        "id": "33b94d7809fa9723",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2eb26b794b33230b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8b4b7cb40bc8ee3b",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b0f1e60bd73cbda",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4e73e8857a9dce4e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "65a2421759de1a74",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "61a670f3e1d4ca0d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d1b5cf8142d4737b",
+    "type": "split",
+    "children": [
+      {
+        "id": "b981adb06cf47d2d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a2ff39149a151d24",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/README.md",
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": true,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2317a66e2d201b41",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docs/README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f96dae5a65ed0f64",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0dc18a41e4780f62",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "a2ff39149a151d24",
+  "lastOpenFiles": [
+    "docs/多租户.md",
+    "docs/_sidebar.md",
+    "docs/_coverpage.md",
+    "images/avatar.png",
+    "docs/微服务篇/Nacos2.x服务重启引起集群降级问题.md",
+    "docs/算法/数据结构.md",
+    "docs/持续集成与持续部署系列/Jenkins讲解.md"
+  ]
+}
