@@ -15,10 +15,12 @@
     
 
 2. 再scp到服务器上
+```bash
     scp /tmp/<package> target_hotst:/tmp
-
+```
 3. 在服务器上离线安装
+```bash
    yum install /tmp/<package>/*.rpm
    或者
    rpm -Uvh --force --nodeps /tmp/<package>/*.rpm
-
+```

@@ -36,9 +36,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [
-      AutoSidebar({
-        ignoreList: ["banner.scss"],
-      }),
+      AutoSidebar({}),
     ],
   },
 

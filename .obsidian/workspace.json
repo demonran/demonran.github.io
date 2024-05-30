@@ -148,6 +148,7 @@
   },
   "active": "2eb26b794b33230b",
   "lastOpenFiles": [
+    "_tmp_93701_da81e47303adf50d6a47770cd4eea17d",
     "pnpm-lock.yaml.1077616204",
     "pnpm-lock.yaml.254422812",
     "pnpm-lock.yaml.3833105902",
@@ -164,7 +165,6 @@
     "package.json",
     "pnpm-lock.yaml",
     "node_modules",
-    "_tmp_74573_690348ab9a87687aa33d983d0eedd7fe",
     "docs/多租户.md",
     "docs/_sidebar.md",
     "docs/_coverpage.md",
