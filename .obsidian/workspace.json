@@ -129,7 +129,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -145,8 +146,18 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a2ff39149a151d24",
+  "active": "2eb26b794b33230b",
   "lastOpenFiles": [
+    "docs/markdown-examples.md",
+    "docs/api-examples.md",
+    "docs/index.md",
+    "markdown-examples.md",
+    "api-examples.md",
+    "index.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "node_modules",
+    "_tmp_74573_690348ab9a87687aa33d983d0eedd7fe",
     "docs/多租户.md",
     "docs/_sidebar.md",
     "docs/_coverpage.md",
