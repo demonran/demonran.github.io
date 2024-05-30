@@ -11,19 +11,12 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: '数据库', link: '/数据库'},
+      { text: '数据库', link: '/数据库/Mysql高可用实践'},
       { text: 'Examples', link: '/markdown-examples' }
     ],
 
     sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: '首页', link: '/README' },
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+      
     ],
   },
   vite: {
