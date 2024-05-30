@@ -12,10 +12,10 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 16.15.0
+      - name: Use Node.js 18.20.2
         uses: actions/setup-node@v2
         with:
-          node-version: "16.x"
+          node-version: "18.x"
       - name: Cache NPM dependencies
         uses: actions/cache@v2
         with:
