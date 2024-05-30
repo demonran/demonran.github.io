@@ -23,7 +23,11 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: '数据库', link: '/数据库/Mysql高可用实践'},
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'CICD', link: '/持续集成与持续部署系列/Jenkins讲解' },
+      { text: '前端', link: '/前端/发布前端资源到阿里云OSS' },
+      { text: '算法', link: '/算法/数据结构' },
+      { text: '微服务', link: '/微服务篇/统一微服务日志.md' },
+      { text: 'K8S', link: '/kubenetes系列/（一）kubenetes简介.md' },
     ],
 
     sidebar: [
