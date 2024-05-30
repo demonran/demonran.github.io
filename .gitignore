@@ -1,5 +1,5 @@
 .vscode
 .DS_Store
-.obsidian
+.obsidian/
 docs/.vitepress/dist
 docs/.vitepress/cache
