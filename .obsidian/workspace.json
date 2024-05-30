@@ -148,6 +148,10 @@
   },
   "active": "2eb26b794b33230b",
   "lastOpenFiles": [
+    "pnpm-lock.yaml.3959611437",
+    "node_modules/@eslint",
+    "node_modules/@eslint-community",
+    "node_modules/@typescript-eslint",
     "docs/markdown-examples.md",
     "docs/api-examples.md",
     "docs/index.md",
