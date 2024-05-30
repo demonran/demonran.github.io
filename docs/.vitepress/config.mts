@@ -9,6 +9,7 @@ export default defineConfig({
   title: "Lura WebSite",
   description: "一些随笔",
   cleanUrls: true,
+  lastUpdated: true,
   markdown: { 
     //行号显示
     lineNumbers: true, 
@@ -19,6 +20,14 @@ export default defineConfig({
     // },
   }, 
   themeConfig: {
+    lastUpdated: {
+      text: "最近更新",
+      formatOptions: {
+        timeStyle: 'medium',
+        dateStyle: 'medium'
+      }
+      
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
