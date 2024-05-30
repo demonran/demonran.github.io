@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "busuanzi.pure.js": "^1.0.3",
+    "sass": "^1.77.3",
     "vitepress": "^1.2.2",
     "vitepress-markdown-timeline": "^1.2.1",
     "vitepress-theme-website": "^1.0.8"
