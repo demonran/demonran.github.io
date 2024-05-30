@@ -12,6 +12,9 @@ importers:
         specifier: ^1.6.5
         version: 1.6.5(eslint@8.57.0)(typescript@5.4.5)(vite@5.2.12(sass@1.77.3))(vitepress@1.2.2(@algolia/client-search@4.23.3)(postcss@8.4.38)(sass@1.77.3)(search-insights@2.14.0)(typescript@5.4.5))
     devDependencies:
+      '@vueuse/core':
+        specifier: ^10.10.0
+        version: 10.10.0(vue@3.4.27(typescript@5.4.5))
       busuanzi.pure.js:
         specifier: ^1.0.3
         version: 1.0.3

@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 import AutoSidebar from "vite-plugin-vitepress-auto-sidebar";
-import timeline from "vitepress-markdown-timeline"; 
+// import timeline from "vitepress-markdown-timeline"; 
 
 
 // https://vitepress.dev/reference/site-config
@@ -14,9 +14,9 @@ export default defineConfig({
     lineNumbers: true, 
 
     //时间线
-    config: (md) => {
-      md.use(timeline);
-    },
+    // config: (md) => {
+    //   md.use(timeline);
+    // },
   }, 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
