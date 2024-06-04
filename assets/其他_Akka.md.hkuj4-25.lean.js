@@ -1,1 +1,0 @@
-import{_ as a,c as e,o as t,a1 as o}from"./chunks/framework.rLRl8Q3O.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"其他/Akka.md","filePath":"其他/Akka.md"}'),r={name:"其他/Akka.md"},c=o("",20),i=[c];function n(l,h,s,d,k,p){return t(),e("div",null,i)}const b=a(r,[["render",n]]);export{u as __pageData,b as default};
