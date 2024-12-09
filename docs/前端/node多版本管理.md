@@ -1,14 +1,19 @@
 ### 使用NVM（Node Version Manager）进行node多版本管理
 
-安装nvm
+#### 安装nvm
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
 
-### 配置nvm
-
+#### 激活nvm
 ```bash
-nvm list # 查看当前安装的node版本
+source ~/.bashrc
+
+```
+
+#### nvm 常用命令
+```bash
+nvm list # 查看当前安装的node版本`
 nvm install 16.13.2 # 安装node版本
 nvm use 16.13.2 # 切换node版本
 nvm alias default 16.13.2 # 设置默认版本
